@@ -1,0 +1,4 @@
+1 =ls -l
+2 = *kill -9 $(ps -x | grep firefox)
+4=rm -v *
+5=find /path -size +1G
