@@ -1,14 +1,15 @@
 def maximum2(n,m):
-    l=len(n)
-    for i in range(l-1):
-        for j in range(i+1,l):
-            if n[i]<n[j]:
-                temp=n[i]
-                n[i]=n[j]
-                n[j]=temp  
+    result=[]
+    a=n.copy()
     for i in range(m):
-        print(n[i])
+        large=0
+        for i in a:
+            if i>large:
+                large=i
+        result.append(large)
+        a.remove(large)
+    return result
 limit = int(input("Enter the size of the list "))
 m=int(input("enter the largest numbers required"))
-n = list(int(num) for num in input("Enter the list items separated by space ").strip().split())[:limit]
+n= list(int(num) for num in input("Enter the list items separated by space ").strip().split())[:limit]
 maximum2(n,m)

@@ -1,4 +1,5 @@
-1 =ls -l
+1 =ls | wc -l
 2 = *kill -9 $(ps -x | grep firefox)
-4=rm -v *
+3=find / -type f -name '#'
+4=rm *.jpeg
 5=find /path -size +1G
